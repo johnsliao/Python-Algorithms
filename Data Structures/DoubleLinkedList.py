@@ -25,16 +25,34 @@ class DoubleLinkedList():
         if self.head is None:
             raise RuntimeError('List is empty')
 
-        # Node is head
-        elif self.head.data is data:
-            print 'Node is head'
-        # Node is tail
-        elif self.tail.data is data:
-            print 'Node is tail'
-        # Node is neither head nor tail
-        else:
-            print 'Node is neither head nor tail'
+        temp_node = self.find(data)
 
+        if temp_node is None:
+            print 'Did not find', data
+            return
+
+        # Node is head
+        if temp_node is self.head:
+            self.head = self.head.next
+        else:
+            temp_node.previous.next = temp_node.next
+
+        # Node is tail
+        if temp_node is self.tail:
+            self.tail = self.tail.previous
+        else:
+            temp_node.next.previous = temp_node.previous
+
+    def find(self, data):
+        temp_node = self.head
+
+        while temp_node is not None:
+            if temp_node.data is data:
+                return temp_node
+
+            temp_node = temp_node.next
+
+        return temp_node
 
     def printListForward(self):
         temp_node = self.head
@@ -60,3 +78,5 @@ DLL.addToHead(3)
 DLL.printListForward()
 
 DLL.delete(2)
+
+DLL.printListForward()
