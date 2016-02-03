@@ -10,3 +10,5 @@ View the .py file in each folder on Github
 # Algorithms
 
 # Data Structures
+[Stack](Data%20Structures/Stack.py)  
+[Queue](Data%20Structures/Queue.py)
