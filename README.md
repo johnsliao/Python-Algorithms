@@ -8,7 +8,9 @@ Clone the repo and import in your Python IDE, or
 View the .py file in each folder on Github
 
 # Algorithms
+[Bubble Sort](Algorithms/BubbleSort.py)
 
 # Data Structures
 [Stack](Data%20Structures/Stack.py)  
 [Queue](Data%20Structures/Queue.py)
+[Double Linked List](Data%20Structures/DoubleLinkedList.py)
