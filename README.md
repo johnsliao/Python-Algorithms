@@ -14,3 +14,4 @@ View the .py file in each folder on Github
 [Stack](Data%20Structures/Stack.py)  
 [Queue](Data%20Structures/Queue.py)
 [Double Linked List](Data%20Structures/DoubleLinkedList.py)
+[Binary Search Tree](Data%20Structures/BinarySearchTree.py)
