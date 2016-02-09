@@ -2,6 +2,7 @@ class MinHeap():
     def __init__(self):
         self.data = []
         self.heapSize = 0
+        self.sortedHeap = []
 
     def insert(self, data):
         self.data.append(data)
@@ -52,10 +53,37 @@ class MinHeap():
 
     def printHeap(self):
         for x in range(self.heapSize):
-            print self.data[x]
+            print self.data[x],
+        print '\n'
 
-    def heapSort(self, list):
-        pass
+    def heapSort(self):
+        self.sortedHeap = self.data
+        endIndex = self.heapSize-1
+
+        while endIndex > 1:
+            print self.sortedHeap
+            self.sortedHeap[0], self.sortedHeap[endIndex] = self.sortedHeap[endIndex], self.sortedHeap[0]
+            endIndex -= 1
+            self.siftDownSort(0, endIndex)
+
+        print self.sortedHeap
+
+
+    def siftDownSort(self, index, end):
+        leftChild = self.getLeftChild(index)
+        rightChild = self.getRightChild(index)
+
+        if leftChild >= end or rightChild >= end:
+            return
+
+        if self.sortedHeap[rightChild] < self.sortedHeap[leftChild]:
+            minIndex = rightChild
+        else:
+            minIndex = leftChild
+
+        if self.sortedHeap[index] > self.sortedHeap[minIndex]:
+            self.sortedHeap[index], self.sortedHeap[minIndex] = self.sortedHeap[minIndex], self.sortedHeap[index]
+            self.siftDownSort(minIndex, end)
 
 minHeap = MinHeap()
 
@@ -66,3 +94,5 @@ minHeap.insert(8)
 minHeap.insert(12)
 minHeap.insert(25)
 
+minHeap.printHeap()
+minHeap.heapSort()
