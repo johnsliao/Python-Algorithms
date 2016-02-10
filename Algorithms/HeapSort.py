@@ -66,7 +66,7 @@ class MinHeap():
             endIndex -= 1
             self.siftDownSort(0, endIndex)
 
-        print self.sortedHeap
+        print self.sortedHeapQuickQuicdsfdsf
 
 
     def siftDownSort(self, index, end):
