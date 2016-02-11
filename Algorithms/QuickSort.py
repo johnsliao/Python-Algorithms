@@ -18,7 +18,9 @@ class QuickSort():
             while list[U] > pivot:
                 U = U - 1
 
+            print self.list, 'swap!'
             self.list[L], self.list[U] = self.list[U], self.list[L]
+            print self.list
 
         self.partition(list, U)
         self.partition(list[L+1:], size-L-1)
