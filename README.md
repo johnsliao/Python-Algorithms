@@ -8,10 +8,11 @@ Clone the repo and import in your Python IDE, or
 View the .py file in each folder on Github
 
 # Algorithms
-[Bubble Sort](Algorithms/BubbleSort.py)
+[Bubble Sort](Algorithms/BubbleSort.py)  
 [Insertion Sort](Algorithms/InsertionSort.py)  
 [Selection Sort](Algorithms/SelectionSort.py)  
 [Heap Sort](Algorithms/HeapSort.py)  
+[Merge Sort](Algorithms/MergeSort.py)  
 
 
 # Data Structures
